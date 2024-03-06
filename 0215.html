@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 도서관 예약 시스템</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>도서 예약하기</h1>
+    <form>
+        <div class="form-section">
+            <label for="username">이름:</label>
+            <input id="username" type="text" name="username" required>
+        </div>
+
+        <div class="form-section">
+            <label>성별:</label>
+            <input id="male" type="radio" name="gender" value="male">
+            <label for="male">남자</label>
+            <input id="female" type="radio" name="gender" value="female">
+            <label for="female">여자</label>
+        </div>
+
+        <div class="form-section">
+            <label for="book-selection">도서 선택:</label>
+            <select id="book-selection" name="book">
+                <option value="">--도서를 선택해주세요--</option>
+                <option value="book1">도서 1</option>
+                <option value="book2">도서 2</option>
+                <option value="book3">도서 3</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="pickup-location">도서관 위치 선택:</label>
+            <select id="pickup-location" name="location">
+                <optgroup label="서울">
+                    <option value="gangnam">강남구</option>
+                    <option value="mapo">마포구</option>
+                </optgroup>
+                <optgroup label="경기">
+                    <option value="suwon">수원시</option>
+                    <option value="yongin">용인시</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="extra-requests">추가 요청 사항:</label>
+            <textarea id="extra-requests" name="requests" rows="4"></textarea>
+        </div>
+
+        <button type="submit">예약하기</button>
+    </form>
+
+</body>
+</html>
